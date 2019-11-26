@@ -15,10 +15,7 @@ function DataHandling (input){
                 hobi=`Hobi: ${input[i][j+1]}`;
             } 
         }
-        hasil+= `${id}\n ${nama}\n ${ttl}\n ${hobi}\n\n `;
-        
-        // console.log();
-        
+        hasil+= `${id}\n ${nama}\n ${ttl}\n ${hobi}\n\n`;
     }
     return hasil;
 }
