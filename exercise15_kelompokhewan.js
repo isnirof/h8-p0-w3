@@ -5,12 +5,14 @@ function groupAnimals(animals) {
   for(i=0;i<animals.length;i++) {
       found = false;
       for(j=0;j<hasil.length;j++) {
+          //cek huruf awal
           if(hasil[j][0][0]===animals[i][0]){
               hasil[j].push(animals[i]);
               found=true;
           }
       }
       if(!found) {
+          // assign array baru dgn huruf awal beda
           hasil.push([animals[i]]);
       }
   }
