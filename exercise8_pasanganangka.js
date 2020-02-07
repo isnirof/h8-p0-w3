@@ -1,12 +1,12 @@
 function pasanganTerbesar(num) {
   // you can only write your code here!
-  max=0;
-  while(num>10) {
-      sisa=num%100;
-      num=Math.floor(num/10);
-      if(sisa>max) {
-          max=sisa;
-      }
+  let max = 0;
+  while (num > 10) {
+    let sisa = num % 100;
+    num = Math.floor(num / 10);
+    if (sisa > max) {
+      max = sisa;
+    }
   }
   return max;
 }

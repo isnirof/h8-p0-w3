@@ -1,77 +1,75 @@
-function dataHandling2 (input) {
+function dataHandling2(input) {
 
     //modifikasi array
-    input.splice(1,2,"Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
-    input.splice(4,1, "Pria", "SMA Internasional Metro")
+    input.splice(1, 2, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
+    input.splice(4, 1, "Pria", "SMA Internasional Metro")
     console.log(input);
 
     //split tanggal lahir
-    data =input;
-    ttl = data.slice(3,4);
-    ttl = ttl[0].split("/");
+    let ttl=input[3].split('/')
+    let bulan = ttl[1]
 
-    //switch bulan lahir
-    switch (ttl[1]) {
-        case('01'):
+    // switch bulan lahir
+    switch (bulan) {
+        case ('01'):
             console.log(`Januari`);
             break;
-      
-        case('02'):
+
+        case ('02'):
             console.log(`Februari`);
             break;
-      
-        case('03'):
+
+        case ('03'):
             console.log(`Maret`);
             break;
-      
-        case('04'):
+
+        case ('04'):
             console.log(`April`);
             break;
-      
-        case('05'):
+
+        case ('05'):
             console.log(`Mei`);
             break;
-      
-        case('06'):
+
+        case ('06'):
             console.log(`Juni`);
             break;
-        
-        case('07'):
+
+        case ('07'):
             console.log(`Juli`);
             break;
-        
-        case('08'):
+
+        case ('08'):
             console.log(`Agustus`);
             break;
-        
-        case('09'):
+
+        case ('09'):
             console.log(`September`);
             break;
-        
-        case('10'):
+
+        case ('10'):
             console.log(`Oktober`);
             break;
-        
-        case('11'):
+
+        case ('11'):
             console.log('November');
             break;
-        
-        case('12'):
+
+        case ('12'):
             console.log(`Desember`);
             break;
     }
 
     //sort ttl
-    sort = ttl.slice(0);
-    sort=sort.sort(function(value1,value2){return Number(value1)<Number(value2)});
-    console.log(sort);
+    let sorted = ttl.slice(0).sort((value1, value2)=> Number(value1) < Number(value2));
+    console.log(sorted);
 
     //join array to string
-    join=ttl.join("-");
+    let join = ttl.join("-");
     console.log(join);
 
     // display nama (15char)
-    nama= input[1].slice(0,15);
+    let nama = input[1].slice(0, 15);
     console.log(nama);
 }
 

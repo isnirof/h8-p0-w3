@@ -1,11 +1,10 @@
 
-function BalikString(word){
-  balik='';
-  for(i=word.length-1;i>=0;i--) {
-    balik+=word[i];
+function BalikString(word) {
+  result = '';
+  for (i = word.length - 1; i >= 0; i--) {
+    result += word[i];
   }
-  return balik;
+  return result;
 }
-
 console.log(BalikString("Hello World!"));
 console.log(BalikString("isnirof"));

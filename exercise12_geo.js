@@ -1,13 +1,12 @@
 function tentukanDeretGeometri(arr) {
   // you can only write your code here!
-  value=true;
-  gap=arr[1]/arr[0];  
-  for(i=0;i<arr.length-1;i++) {
-    if(arr[i+1]/arr[i]!==gap) {
-        value = false;
+  let gap = arr[1] / arr[0];
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] / arr[i] !== gap) {
+      return false;
     }
   }
-  return value;
+  return true;
 }
 
 // TEST CASES

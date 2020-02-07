@@ -1,9 +1,7 @@
 function palindrome(kata) {
   // you can only write your code here!
-  for(i=0;i<kata.length;i++){
-      if(kata[i]!==kata[kata.length-1-i]) {
-          return false;
-      }
+  for (let i = 0; i < kata.length; i++) {
+    if (kata[i] !== kata[kata.length - 1 - i]) return false;
   }
   return true;
 }

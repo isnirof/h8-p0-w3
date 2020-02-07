@@ -1,9 +1,7 @@
 function hitungJumlahKata(kalimat) {
     // you can only write your code here!
-    kalimat = kalimat.split(" ");
-    return kalimat.length;
+    return kalimat.split(' ').length;
 }
-
 // TEST CASES
 console.log(hitungJumlahKata('I have a dream')); // 4
 console.log(hitungJumlahKata('Never eat shredded wheat or cake')); // 6

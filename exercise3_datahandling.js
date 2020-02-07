@@ -1,25 +1,11 @@
-function DataHandling (input){            
-    hasil='';
-    for (i=0;i<input.length;i++) {
-        for(j=0;j<=input[i].length;j++) {
-            if(j==0) {
-                id=`Nomor ID: ${input[i][j]}`;
-            }
-            else if (j==1) {
-                nama=`Nama Lengkap: ${input[i][j]}`;
-            }
-            else if (j==2) {
-                ttl=`TTL: ${input[i][j]} ${input[i][j+1]}`;
-            }
-            else if (j==3) {
-                hobi=`Hobi: ${input[i][j+1]}`;
-            } 
-        }
-        hasil+= `${id}\n ${nama}\n ${ttl}\n ${hobi}\n\n`;
+function DataHandling(input) {
+    let result = ''
+    for (let i = 0; i < input.length; i++) {
+        result += `Nomor ID: ${input[i][0]}\nNama Lengkap: ${input[i][1]}\nTTL: ${input[i][2]}\nHobi: ${input[i][3]}\n\n`
     }
-    return hasil;
+    return result
 }
-    
+
 
 //contoh input
 var input = [

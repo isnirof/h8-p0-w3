@@ -1,31 +1,20 @@
 function targetTerdekat(arr) {
   // you can only write your code here!
-  foundX=false;
-  foundO=false;
+  let indexO = -1
+  let indexX = -1
 
-  for(i=0;i<arr.length;i++) {
-    if(arr[i]=='x') {
-      indexX=i;
-      foundX=true;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 'x') {
+      indexX = i;
     }
-      
-    else if(arr[i]=='o') {
-      indexO=i;
-      foundO=true;
+    else if (arr[i] == 'o') {
+      indexO = i;
     }
-
-    if(foundO && foundX){
-        gap=indexX-indexO;
-        break;
+    if (indexO !== -1 && indexX !== -1) {
+      return Math.abs(indexX - indexO);
     }
   }
-
-  if (foundX && foundO) {
-      return Math.abs(gap);
-  }
-  else {
-      return 0;
-  }
+  return 0
 }
 
 // TEST CASES
